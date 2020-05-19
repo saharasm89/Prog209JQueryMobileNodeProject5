@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/themes/my-custom-theme.css" />
+    <link rel="stylesheet" href="/stylesheets/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="home" data-theme='d'>
+      <div data-role="header"'>  
+          <h1>Welcome!</h1>
+          <div data-role="navbar" data-theme='d'>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workoutplan">workoutplan</a></li>
+                <li><a href="#addworkout">Add Workout</a></li>
+                <li><a href="#deleteworkout">Delete Workout</a></li>
+            </ul>
+        </div>
+      </div>
+      <div data-role="main" class="ui-content" data-theme="d">
+          <form id="login-form" method="POST" action=""data-ajax="false">
+              <label for="email">Email:</label><br>
+              <input type="text" id="email" name="email" value="saharasm89@gmail.com" readonly><br>
+              <label for="pword">Password:</label><br>
+              <input type="password" id="pword" name="pword" value="Mara1989!" readonly><br><br>
+              <input id="login-button" type="button" value="Sign In">
+          </form> 
+          <div id="hidden-main-content">
+
+              <h2>Welcome Back Sahara!</h2>
+              <p>Weight: 135</p>
+              <p>Bodyfat: 14%</p>
+              <p>Height: 5'1</p>
+              <p>Sex: Female</p>
+              
+          </div>
+          
+      </div>
+        <div data-role="footer" data-theme="d">
+          <h1>Copyright Sahara Maradiaga 2020</h1>
+      </div>
+  </div> <!-- End of Page 1 -->
+
+  <div data-role="page" id="workoutplan" data-theme="d">
+      <div data-role="header"data-theme='d'>  
+          <h1>Workout Plan</h1>
+          <div data-role="navbar" data-theme='d'>
+              <ul>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#workoutplan">workoutplan</a></li>
+                  <li><a href="#addworkout">Add Workout</a></li>
+                  <li><a href="#deleteworkout">Delete Workout</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div data-role="main" class="ui-content" data-theme="d">
+          <h2>Workout Plan</h2>
+          <p>Monday- Chest</p>
+          <p>Tuesday- Legs</p>
+          <p>Wednesday - Back</p>
+          <p>Thursday - Arms(Bicepts and Tricepts)</p>
+          <p>Friday - Shoulders</p>
+      </div>
+
+        <div data-role="footer" data-theme="d">
+          <h1>Copyright Sahara Maradiaga 2020</h1>
+      </div>
+  </div> <!--End of Workout Page -->
+
+
+  <div data-role="page" id="deleteworkout" data-theme="d">
+      <div data-role="header"data-theme='d'>  
+          <h1>Welcome!</h1>
+          <div data-role="navbar" data-theme='d'>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workoutplan">workoutplan</a></li>
+                <li><a href="#addworkout">Add Workout</a></li>
+                <li><a href="#deleteworkout">Delete Workout</a></li>
+            </ul>
+        </div>
+      </div>
+
+      <div data-role="main" class="ui-content" data-theme="d">
+          Page content goes here
+      </div>
+
+      <div data-role="footer" data-theme="d">
+          <h1>Copyright Sahara Maradiaga 2020</h1>
+      </div>
+  </div><!--End of Stats-->
+
+
+  <div data-role="page" id="addworkout" data-theme='d'>
+      <div data-role="header"data-theme='d'>  
+          <h1>Welcome!</h1>
+          <div data-role="navbar" data-theme='d'>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#workoutplan">workoutplan</a></li>
+                <li><a href="#addworkout">Add Workout</a></li>
+                <li><a href="#deleteworkout">Delete Workout</a></li>
+            </ul>
+        </div>
+      </div>
+      <div data-role="main" class="ui-content" data-theme="d">
+          <form>
+              <input data-type="search" id="searchForCollapsibleSet">
+          </form>
+          <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
+              <div data-role="collapsible" data-filtertext="Animals">
+                  <h3>Animals</h3>
+                  <ul data-role="listview" data-inset="false">
+                      <li>Cats</li>
+                      <li>Dogs</li>
+                      <li>Lizards</li>
+                      <li>Snakes</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+      <div data-role="footer" data-theme="d">
+          <h1>Copyright Sahara Maradiaga 2020</h1>
+      </div>
+  </div>
+
+  <script src="/javascripts/login.js"></script>
+
+  </body>
+</html>

@@ -23,7 +23,21 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
     document.getElementById("deleteWorkout-button").addEventListener("click", function(){
-        let 
+        let dayTextbox = document.getElementById("deleteDay");
+        let categoryTextbox = document.getElementById("deleteCategory");
+
+        $.ajax({
+            type: "DELETE",
+            url:"/deleteWorkout" +  "?Category=" + categoryTextbox.value +"&Day=" + dayTextbox.value,
+            success: function(result){
+                console.log(result);
+            },
+            error: function(){
+                console.log("Did Not Delete");
+                alert("Did Not Delete");
+            }
+            // "/deleteWorkout/Category=chest/Day=Monday"
+        });
     })
 
 });

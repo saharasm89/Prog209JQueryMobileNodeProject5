@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/javascripts/Main.js"></script>
   </head>
   <body>
     <div data-role="page" id="home" data-theme='d'>
@@ -61,11 +62,9 @@
 
       <div data-role="main" class="ui-content" data-theme="d">
           <h2>Workout Plan</h2>
-          <p>Monday- Chest</p>
-          <p>Tuesday- Legs</p>
-          <p>Wednesday - Back</p>
-          <p>Thursday - Arms(Bicepts and Tricepts)</p>
-          <p>Friday - Shoulders</p>
+          <ul id="workoutList">
+            
+          </ul>
       </div>
 
         <div data-role="footer" data-theme="d">
@@ -86,11 +85,17 @@
             </ul>
         </div>
       </div>
-
       <div data-role="main" class="ui-content" data-theme="d">
-          Page content goes here
+        <form id="login-form" method="POST" action=""data-ajax="false">
+            <h2>Enter The day and category you want to delete</h2>
+            <label for="day">Day:</label><br>
+            <input type="text" id="deleteDay" name="deleteDay" value="Monday" ><br>
+            <label for="category">Category:</label><br>
+            <input type="text" id="deleteCategory" name="deleteCategory" value="Chest" ><br><br>
+            <input id="deleteWorkout-button" type="button" value="Delete Workout">
+        </form> 
       </div>
-
+     
       <div data-role="footer" data-theme="d">
           <h1>Copyright Sahara Maradiaga 2020</h1>
       </div>
@@ -110,20 +115,13 @@
         </div>
       </div>
       <div data-role="main" class="ui-content" data-theme="d">
-          <form>
-              <input data-type="search" id="searchForCollapsibleSet">
-          </form>
-          <div data-role="collapsibleset" data-filter="true" data-inset="true" id="collapsiblesetForFilter" data-input="#searchForCollapsibleSet">
-              <div data-role="collapsible" data-filtertext="Animals">
-                  <h3>Animals</h3>
-                  <ul data-role="listview" data-inset="false">
-                      <li>Cats</li>
-                      <li>Dogs</li>
-                      <li>Lizards</li>
-                      <li>Snakes</li>
-                  </ul>
-              </div>
-          </div>
+        <form id="login-form" method="POST" action=""data-ajax="false">
+            <label for="day">Day:</label><br>
+            <input type="text" id="day" name="day" value="Monday" ><br>
+            <label for="category">Category:</label><br>
+            <input type="text" id="category" name="category" value="Chest" ><br><br>
+            <input id="AddWorkout-button" type="button" value="Add Workout">
+        </form> 
       </div>
 
       <div data-role="footer" data-theme="d">
@@ -132,6 +130,6 @@
   </div>
 
   <script src="/javascripts/login.js"></script>
-
+ <script src="/javascripts/popUp.js"></script>
   </body>
 </html>

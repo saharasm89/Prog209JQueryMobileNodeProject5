@@ -28,9 +28,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
         $.ajax({
             type: "DELETE",
-            url:"/deleteWorkout" +  "?Category=" + categoryTextbox.value +"&Day=" + dayTextbox.value,
+            url:"/deleteWorkout" +  "?category=" + categoryTextbox.value +"&day=" + dayTextbox.value,
             success: function(result){
                 console.log(result);
+                window.location.href = "#workoutplan";
+                window.location.reload();
             },
             error: function(){
                 console.log("Did Not Delete");
@@ -38,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
             }
             // "/deleteWorkout/Category=chest/Day=Monday"
         });
-    })
+    });
 
 });
 
